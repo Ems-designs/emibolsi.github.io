@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* AJUSTES GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F9F7E5;
+    font-family: 'Raleway', serif;
+}
+
+h2{ 
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+p{ margin-bottom: 1em; }
+
+a, a:visited{ color: black;}
+
+#trabajos a{ text-decoration: none; }
+
+#Info div img{ width: 32px; }
+
+
+/* ---------------- INDEX.HTML ----------------*/
+/* CELULAR */
+/* BANNER INICIO */
+#Banner{
+    background-color: #FFD35A;
+    height: 790px;
+    width: 100%;
+}
+
+#Info{
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    top: 850px;
+}
+
+#foto{ width: 100%; }
+
+h1{
+    font-weight: 500;
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
+
+#Banner img:not(#foto){ margin-top: 0.75em; }
+
+
+/* MAIN */
+#MainIndex{
+    position: relative;
+    top: 750px;
+}
+
+#MainIndex section{
+    width: 80%;
+    margin: 5em auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* TRABAJOS */
+#trabajos div{
+    margin-bottom: 4em;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#trabajos div p{
+    font-weight: 900;
+    font-size: 1.25em;
+}
+
+#trabajos img{
+    margin-bottom: 0.5em;
+    width: 100%;
+    object-fit: cover;
+
+    transition: 0.3s;
+    opacity: 0;
+}
+
+#trabajos div img:hover{ opacity: 1; }
+
+#trabajos div:nth-of-type(1){ background-image: url(img/web_cubierta_fragment.png); }
+#trabajos div:nth-of-type(2){ background-image: url(img/DD5_cubierta_fragmentada.png); }
+#trabajos div:nth-of-type(3){ background-image: url(img/editorial_2_cubierta_fragment.png); }
+#trabajos div:nth-of-type(4){ background-image: url(img/interfaces_cubierta_fragment.png); }
+#trabajos div:nth-of-type(5){ background-image: url(img/identidad_1_cubierta_fragment.png); }
+#trabajos div:nth-of-type(6){ background-image: url(img/DD6_cubierta_fragment.png); }
+
+
+
+/* TABLET */
+@media all and (min-width:768px) {
+    /* BANNER */
+    #Banner{ height: 100vh; }
+
+    #Info{
+        width: 50%;
+        margin: 0;
+        padding-top: 3em;
+
+        top: 0;
+        left: 10%;
+
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    #Info div{
+        display: flex;
+        align-items: center;
+
+        margin-top: 0.75em;
+    }
+
+    #Banner img:not(#foto){ margin: 0 0.5em 0 0;}
+
+    #foto{ width: 80%; }
+
+    #Info div p{ margin-bottom: 0; }
+
+
+    /* MAIN */
+    #MainIndex{
+        position: static;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    #MainIndex section{ 
+        margin: 5em auto;
+        width: 95%;
+    }
+
+    
+    /* TRABAJOS */
+    #trabajos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #trabajos div{
+        margin-bottom: 2em;
+        width: 45%;
+    }
+}
+
+
+
+/* COMPUTADORA */
+@media all and (min-width:1200px) { #Info{ width: 30%; } }
+
+
+
+/* ---------------- MATERIA.HTML ----------------*/
+/* CELULAR */
+/* NAV */
+nav{ background-color: #ED7151; }
+    
+nav div{    
+    width: 85%;
+    padding: 1em 0;
+    margin: 0 auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img{ width: 32px; }
+
+nav p{
+    color: #F9F7E5;
+    font-size: 2em;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+/* MAIN */
+.MainMateria{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.MainMateria h2{
+    color: #ED7151;
+    margin: 2em auto;
+    text-align: center;
+}
+
+
+/* IMÁGENES */
+.Imágenes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 3em 0 6em;
+}
+
+.Imágenes img{
+    width: 100%;
+    object-fit: cover;
+    margin: 1em 0;    
+}
+
+.Imágenes div{
+    width: 100%;
+    height: 200px;
+}
+
+iframe{ margin-top: 1em; }
+
+#video-DD6{ width: 100%; }
+
+#video-interfaces{ background-color: #FFF2E4;}
+
+
+/* GRILLA */
+.Grilla{
+    display: grid;
+    grid-template-rows: 3fr;
+    gap: 1.5em;
+
+    width: 90%;
+    margin: 3em auto 6em;
+}
+
+#video-web{
+    width: 100%;
+    grid-column: span 2;
+}
+
+#video-interfaces{
+    width: 100%;
+    grid-column: span 2;
+}
+
+.Grilla img{ width: 100%; }
+
+.Grilla img:last-of-type{
+    width: 100%;
+    grid-column: span 2;
+}
+
+
+/* TABLET */
+@media all and (min-width:768px){
+    /* NAV */
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav div{ width: 90%; }
+
+
+    /* MAIN Y ÁREAS */
+    .MainMateria{ width: 90%;}
+
+    .MainMateria div:first-of-type{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+    /* IMÁGENES */
+    .Imágenes{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Imágenes img.cuadrada{ width: 30%; }
+
+    .Imágenes img.horizontal{ width: 100%; }
+
+    .Imágenes div:not(.animacion_AUVO){
+        width: 100%;
+        height: 500px;
+    }
+
+
+    /* GRILLA */
+    .Grilla img{ width: 100%; }
+
+    .Grilla{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        width: 100%;
+    }
+
+    #video-web{
+        grid-column: span 1;
+        grid-row: span 3;
+        width: 100%;
+    }
+
+    #video-interfaces{
+        grid-column: span 1;
+        grid-row: span 3;
+        width: 100%;
+    }
+
+    .Grilla img:nth-of-type(3){ grid-column: span 2; }
+}
+
+
+
+/* COMPUTADORA */
+@media all and (min-width:1200px){
+    /* NAV */
+    nav div{
+        width: 70%;
+        padding: 1.5em 0;
+    }
+
+    /* MAIN */
+    .MainMateria{ width: 70%; }
+    
+    /* GRILLA */
+    #video-web{ width: 96%; }
+}
