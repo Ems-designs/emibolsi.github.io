@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{ scroll-behavior: smooth; }
+
+.dimensiones{
+    max-width: 1360px;
+    width: 90%;
+
+    margin: 0 auto;
+    padding: 1em;
+}
+
+:root{
+    --principal: #634193;
+    --secundario: #B0DEF8;
+}
+
+.botones{
+    padding: 1em 3em;
+    color: white;
+    background-color: var(--principal);
+    border: 2px solid var(--principal);
+    
+    font-weight: bold;
+    
+    border-radius: 5px;
+    
+    transition: 0.3s;
+}
+
+.botones:hover{
+    color: var(--principal);
+    background-color: transparent;
+    border: 2px solid var(--principal);
+    
+    border-radius: 5px;
+}
+
+.active{
+    padding: 0.5em 1em;
+
+    color: var(--principal);
+    background-color: white;
+}
+
+
+/* GENERALES DEL TEXTO */
+@font-face{
+    font-family: "Britannic Bold";
+    src: url(fonts/britannic_bold_regular-webfont.woff), url(fonts/britannic_bold_regular-webfont.woff2);
+}
+
+p, a, label{ font-family: "Montserrat", sans-serif; }
+
+a, label{ color: white; }
+
+h1, h2, h3{ font-family: "Britannic Bold"; }
+
+h2{
+    font-size: 2.5em;
+    margin: 1em 0;
+}
+
+a{ text-decoration: none; }
+
+
+
+/* HEADER */ 
+header{ background-color: var(--principal); }
+
+header div.dimensiones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+header div.dimensiones div{
+    width: 7%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    margin-left: 1.5em;
+
+    padding: 0.5em 1em;
+
+    transition: 0.3s;
+
+    position: relative;
+    z-index: 100;
+}
+
+nav a::before{
+    content: "";
+
+    display: inline-block;
+    width: 0;
+    height: 1.5px;
+
+    position: absolute;
+    bottom: -0.45em;
+
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: -1;
+
+    background-color: #ffffff;
+
+    transition: 0.3s;
+}
+
+nav a:hover::before{ width: 100%; }
+
+
+/* FOOTER */
+footer{
+    background-color: var(--principal);
+
+    margin: 0 auto;
+    padding: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+footer a{ height: 28px; }
+
+
+
+/* PRIMER PÁGINA: INDEX.HTML */
+/* SECTION 1 */
+#PRIMERA{
+    background-image: linear-gradient(#000000bd, transparent), url(img/banner_inicio.png);
+
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: white;
+
+    height: 85vh;
+}
+
+#PRIMERA div.dimensiones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#PRIMERA h1{ 
+    text-align: center;
+    font-size: 7em;
+}
+
+#PRIMERA h1 span{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 0.3em;
+}
+
+#PRIMERA a:nth-of-type(1){
+    margin: 1em;
+    padding: 1em 3em;
+
+    color: white;
+    border: 2px solid white;
+    
+    font-weight: bold;
+    
+    border-radius: 5px;
+    
+    transition: 0.3s;
+}
+    
+#PRIMERA a:nth-of-type(1):hover{
+    background-color: #ffffff3d;
+    border: 2px solid white;
+    
+    border-radius: 5px;
+}
+
+
+
+/* SECTION 2 - TIENDA, TERCER PÁGINA: TIENDA.HTML*/
+#SEGUNDA{
+    background-color: var(--secundario);
+
+    width: 70%;
+
+    margin: 0 auto;
+    padding: 3em 1em;
+
+    position: relative;
+    top: -5em;
+
+    text-align: center;
+}
+
+#SEGUNDA div, #TIENDA{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+
+    margin-bottom: 3em;
+
+    text-align: center;
+}
+
+#SEGUNDA div article img, #TIENDA article img{
+    width: 85%;
+    margin: 1.5em auto;
+}
+
+#SEGUNDA div article, #TIENDA article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    width: 90%;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+h3{ font-size: 1.1em; }
+
+h3 + p{
+    font-size: small;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
+
+#SEGUNDA div article span, #TIENDA article span{
+    font-size: 1em;
+    font-weight: 700;
+    color: #CB2318;
+}
+
+
+
+/* SECTION 3 - ARTICLE */
+section#ancla article, section article{
+    display: flex;
+    flex-direction: row;
+
+    margin: 5em 0;
+}
+
+section#ancla article div, section article div{ margin: 1.5em; }
+
+section#ancla article h2 span{
+    font-size: 0.5em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+section#ancla p{ margin-bottom: 5em; }
+
+
+
+/* SECTION 4 - IMÁGENES DISPLAY: GRID;*/
+#TERCERA h2{
+    color: white;
+
+    position: relative;
+    z-index: 10000;
+
+    bottom: -4em;
+
+    text-align: center;
+}
+
+#grid figure{
+    position: relative;
+}
+
+#grid figure p{
+    z-index: 100;
+
+    font-family: "Britannic Bold";
+    font-size: 1.5em;
+    
+    color: white;
+    
+    position: absolute;
+    left: 0.75em;
+    bottom: 0.5em;
+    
+    opacity: 0%;
+    transition: 0.3s;
+}
+
+#grid figure:hover p{
+    opacity: 100%;
+}
+
+#grid img{
+    width: 100%;
+    height: 101%;
+
+    object-fit: cover;
+
+    filter: grayscale(1) brightness(0.6);
+
+    transition: 0.3s;
+}
+
+#grid img:hover{
+    width: 100%;
+    height: 101%;
+
+    object-fit: cover;
+
+    filter: grayscale(0) brightness(0.8);
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#grid figure:nth-of-type(1){ grid-column: span 2; }
+
+#grid figure:nth-of-type(2){ grid-row: span 2; }
+
+#grid figure:nth-of-type(3){ height: 102%; }
+
+
+
+/* SECTION 5 - NEWSLETTER */
+#newsletter{
+    background-color: var(--principal);
+    color: white;
+}
+
+#newsletter div.dimensiones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+form{ margin-bottom: 5em; }
+
+input[type= "email"]{
+    width: 50%;
+    height: 3.2em;
+
+    border: none;
+
+    padding: 1em;
+    margin-bottom: 1.5em;
+}
+
+input[type= "submit"]{
+    margin-left: 1em;
+    padding: 1em 3em;
+    color: var(--principal);
+    background-color: white;
+    border: 2px solid var(--principal);
+    
+    font-weight: bold;
+    
+    border-radius: 5px;
+    
+    transition: 0.3s;
+}
+
+input[type= "submit"]:hover{
+    color: white;
+    background-color: var(--principal);
+    border: 2px solid white;
+
+    border-radius: 5px;
+}
+
+
+
+/* UBICACIÓN GOOGLE MAPS */
+iframe{
+    width: 100%;
+    height: 410px;
+
+    display: block;
+}
+
+
+
+/* SRGUNDA PÁGINA: ACERCADE.HTML */
+section.dimensiones h1{
+    font-size: 4em;
+    text-align: center;
+}
+
+section.dimensiones span{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.5em;
+    font-weight: 400;
+}
+
+div#grilla_chica + div{ width: 45%; }
+
+section.dimensiones:not(#TIENDA) article p{ margin-top: 1.5em;} 
+
+#grilla_chica img{
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+#grilla_chica{
+    width: 45%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#grilla_chica img:nth-of-type(1){ grid-column: span 2; }
+
+
+
+/* TERCER PÁGINA: TIENDA.HTML */
+#TIENDA h2{
+    grid-column: span 4;
+    margin: 1em auto;
+}
