@@ -29,24 +29,17 @@ a, a:visited{ color: black;}
 
 /* ---------------- INDEX.HTML ----------------*/
 /* CELULAR */
-/* BANNER INICIO */
-#Banner{
-    background-color: #FFD35A;
-    height: 790px;
-    width: 100%;
-}
+/* INICIO */
+#Banner video{ width: 100%; }
 
 #Info{
     width: 80%;
-    margin: 0 auto;
+    margin: 4em auto;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    position: relative;
-    top: 850px;
 }
 
 #foto{ width: 100%; }
@@ -61,11 +54,6 @@ h1{
 
 
 /* MAIN */
-#MainIndex{
-    position: relative;
-    top: 750px;
-}
-
 #MainIndex section{
     width: 80%;
     margin: 5em auto;
@@ -112,15 +100,22 @@ h1{
 /* TABLET */
 @media all and (min-width:768px) {
     /* BANNER */
-    #Banner{ height: 100vh; }
+    #Banner{
+        height: 100vh;
+    
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-left: 3em;        
+    }
+
+    #Banner video{ width: 45%; }
 
     #Info{
         width: 50%;
         margin: 0;
-        padding-top: 3em;
-
-        top: 0;
-        left: 10%;
 
         align-items: flex-start;
         text-align: left;
@@ -169,7 +164,23 @@ h1{
 
 
 /* COMPUTADORA */
-@media all and (min-width:1200px) { #Info{ width: 30%; } }
+@media all and (min-width:1200px){
+    /* BANNER INICIO */
+    #Banner{ 
+        width: 85%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #Banner video{ object-fit: none; }
+
+    #Info{
+        width: 40%;
+        margin-left: 2.5em;
+        padding-top: 3em;
+    }
+
+}
 
 
 
