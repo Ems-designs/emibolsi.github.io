@@ -234,9 +234,10 @@ nav p{
 
 iframe{ margin-top: 1em; }
 
-#video-DD6{ width: 100%; }
+.vid-DD5-6{ width: 100%; margin-bottom: 2em;}
 
 #video-interfaces{ background-color: #FFF2E4;}
+
 
 
 /* GRILLA */
@@ -281,7 +282,7 @@ iframe{ margin-top: 1em; }
     /* MAIN Y ÁREAS */
     .MainMateria{ width: 90%;}
 
-    .MainMateria div:first-of-type{
+    .MainMateria div:first-of-type:not(.libro){
         width: 80%;
         margin: 0 auto;
     }
@@ -296,11 +297,11 @@ iframe{ margin-top: 1em; }
         width: 100%;
     }
 
-    .Imágenes img.cuadrada{ width: 30%; }
+    .Imágenes .cuadrada{ width: 30%; }
 
-    .Imágenes img.horizontal{ width: 100%; }
+    .Imágenes .horizontal{ width: 100%; }
 
-    .Imágenes div:not(.animacion_AUVO){
+    .Imágenes div{
         width: 100%;
         height: 500px;
     }
